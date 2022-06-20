@@ -22,6 +22,8 @@ class Translator
 
     public static function config(string $default)
     {
+        $default = str_replace('-', '_', $default);
+
         if (!preg_match('~^[a-z]{2}_[A-Z]{2}$~', $default)) {
             throw new InvalidArgumentException();
         }
@@ -51,6 +53,7 @@ class Translator
 
     public static function setLang(string $lang)
     {
+        $lang = str_replace('-', '_', $lang);
         static::guardNotConfigured();
         if (in_array($lang, static::getLanguages())) {
             static::$lang = $lang;

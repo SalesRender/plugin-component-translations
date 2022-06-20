@@ -51,6 +51,18 @@ class TranslatorTest extends TestCase
         $this->assertEquals('en_US', Translator::getLang());
     }
 
+    public function testInitializeTranslatorWithMinus()
+    {
+        Translator::config('ru-RU');
+        $this->assertEquals('ru_RU', Translator::getDefaultLang());
+        $this->assertEquals('ru_RU', Translator::getLang());
+        $this->assertEquals('Тестовое сообщение', Translator::get('main', 'Тестовое сообщение'));
+
+        Translator::setLang('en-US');
+        $this->assertEquals('ru_RU', Translator::getDefaultLang());
+        $this->assertEquals('en_US', Translator::getLang());
+    }
+
     public function testGetTranslatorTranslation()
     {
         Translator::config('en_US');
