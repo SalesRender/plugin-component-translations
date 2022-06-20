@@ -16,9 +16,11 @@ use RuntimeException;
 class Translator
 {
 
-    protected static $default;
+    protected static string $default;
 
-    protected static $lang;
+    protected static string $lang;
+
+    private static array $languages;
 
     public static function config(string $default)
     {
@@ -35,14 +37,17 @@ class Translator
     public static function getLanguages(): array
     {
         static::guardNotConfigured();
-        return array_unique(
-            array_merge(Helper::getLanguages(), [static::$default])
-        );
+        if (!isset(self::$languages)) {
+            self::$languages = array_unique(
+                array_merge(Helper::getLanguages(), [static::$default])
+            );
+        }
+        return self::$languages;
     }
 
     public static function getDefaultLang(): ?string
     {
-        return static::$default;
+        return static::$default ?? null;
     }
 
     public static function getLang(): string
@@ -104,7 +109,7 @@ class Translator
     
     protected static function guardNotConfigured()
     {
-        if (static::$default === null) {
+        if (!isset(static::$default)) {
             throw new RuntimeException('Translator was not configured');
         }
     }
