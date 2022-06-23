@@ -8,7 +8,6 @@
 namespace Leadvertex\Plugin\Components\Translations;
 
 
-use Adbar\Dot;
 use InvalidArgumentException;
 use Leadvertex\Plugin\Components\Translations\Components\Helper;
 use RuntimeException;
@@ -72,11 +71,7 @@ class Translator
         $default = static::load(static::$default);
         $lang = static::load(static::$lang);
 
-        $path = "{$category}.{$message}";
-        $translation = $lang->get(
-            $path,
-            $default->get($path, $message)
-        );
+        $translation = $lang[$category][$message] ?? ($default[$category][$message] ?? $message);
 
         foreach ($params as $key => $param) {
             $translation = str_replace('{' . $key . '}', (string) $param, $translation);
@@ -85,7 +80,7 @@ class Translator
         return $translation;
     }
 
-    protected static function load(string $lang): Dot
+    protected static function load(string $lang): array
     {
         $path = Helper::getTranslationsPath();
         $translations = (string) $path->down($lang . '.json');
@@ -101,10 +96,10 @@ class Translator
                 }
             }
 
-            return new Dot($associative);
+            return $associative;
         }
 
-        return new Dot([]);
+        return [];
     }
     
     protected static function guardNotConfigured()

@@ -75,6 +75,7 @@ class TranslatorTest extends TestCase
         $this->assertEquals('Сообщение с {param}', Translator::get('main', 'Сообщение с {param}'));
         $this->assertEquals('Message with delay to 11AM', Translator::get('main', 'Сообщение с {delay}', ['delay' => 'delay to 11AM']));
         $this->assertEquals('Message with {delay}', Translator::get('main', 'Сообщение с {delay}'));
+        $this->assertEquals('Full name', Translator::get('third', 'Ф.И.О.'));
     }
 
     public static function tearDownAfterClass(): void

@@ -23,6 +23,10 @@
         {
             "source": "Тестовое сообщение",
             "translated": ""
+        },
+        {
+            "source": "Ф.И.О.",
+            "translated": "Full name"
         }
     ]
 }
