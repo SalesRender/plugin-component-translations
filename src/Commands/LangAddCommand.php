@@ -5,7 +5,7 @@
  * @author Timur Kasumov aka XAKEPEHOK
  */
 
-namespace Leadvertex\Plugin\Components\Translations\Commands;
+namespace SalesRender\Plugin\Components\Translations\Commands;
 
 
 use RuntimeException;

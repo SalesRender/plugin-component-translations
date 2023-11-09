@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Leadvertex\Plugin\Components\Translations\Components;
+namespace SalesRender\Plugin\Components\Translations\Components;
 
 
 use PHPUnit\Framework\TestCase;

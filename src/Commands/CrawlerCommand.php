@@ -5,14 +5,14 @@
  * @author Timur Kasumov aka XAKEPEHOK
  */
 
-namespace Leadvertex\Plugin\Components\Translations\Commands;
+namespace SalesRender\Plugin\Components\Translations\Commands;
 
 
 use Adbar\Dot;
 use HaydenPierce\ClassFinder\ClassFinder;
-use Leadvertex\Plugin\Components\Translations\Components\Helper;
 use PhpParser\ParserFactory;
 use ReflectionClass;
+use SalesRender\Plugin\Components\Translations\Components\Helper;
 use Symfony\Component\Console\Command\Command;
 use XAKEPEHOK\Path\Path;
 

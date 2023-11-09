@@ -5,10 +5,10 @@
  * @author Timur Kasumov aka XAKEPEHOK
  */
 
-namespace Leadvertex\Plugin\Components\Translations\Commands;
+namespace SalesRender\Plugin\Components\Translations\Commands;
 
 
-use Leadvertex\Plugin\Components\Translations\Components\Helper;
+use SalesRender\Plugin\Components\Translations\Components\Helper;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 

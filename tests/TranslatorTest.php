@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Leadvertex\Plugin\Components\Translations;
+namespace SalesRender\Plugin\Components\Translations;
 
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;

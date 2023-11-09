@@ -5,12 +5,12 @@
  * @author Timur Kasumov aka XAKEPEHOK
  */
 
-namespace Leadvertex\Plugin\Components\Translations;
+namespace SalesRender\Plugin\Components\Translations;
 
 
 use InvalidArgumentException;
-use Leadvertex\Plugin\Components\Translations\Components\Helper;
 use RuntimeException;
+use SalesRender\Plugin\Components\Translations\Components\Helper;
 
 class Translator
 {

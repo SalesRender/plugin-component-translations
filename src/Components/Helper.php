@@ -5,7 +5,7 @@
  * @author Timur Kasumov aka XAKEPEHOK
  */
 
-namespace Leadvertex\Plugin\Components\Translations\Components;
+namespace SalesRender\Plugin\Components\Translations\Components;
 
 
 use Composer\Autoload\ClassLoader;

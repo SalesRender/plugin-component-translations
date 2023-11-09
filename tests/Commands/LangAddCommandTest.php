@@ -1,10 +1,10 @@
 <?php
 
-namespace Leadvertex\Plugin\Components\Translations\Commands;
+namespace SalesRender\Plugin\Components\Translations\Commands;
 
 use InvalidArgumentException;
-use Leadvertex\Plugin\Components\Translations\Components\CommandTestCase;
 use RuntimeException;
+use SalesRender\Plugin\Components\Translations\Components\CommandTestCase;
 use Symfony\Component\Console\Tester\CommandTester;
 use Symfony\Component\Filesystem\Filesystem;
 
