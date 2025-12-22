@@ -53,7 +53,7 @@ abstract class CrawlerCommand extends Command
     protected function crawl(): array
     {
         ClassFinder::enablePSR4Support();
-        $classes = ClassFinder::getClassesInNamespace('Leadvertex\Plugin', ClassFinder::RECURSIVE_MODE);
+        $classes = ClassFinder::getClassesInNamespace('SalesRender\Plugin', ClassFinder::RECURSIVE_MODE);
 
         $scheme = [];
         foreach ($classes as $class) {
