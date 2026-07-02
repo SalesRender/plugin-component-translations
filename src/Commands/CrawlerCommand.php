@@ -61,7 +61,7 @@ abstract class CrawlerCommand extends Command
             $file = $reflection->getFileName();
 
             $code = file_get_contents($file);
-            $parser = (new ParserFactory)->create(ParserFactory::PREFER_PHP7);
+            $parser = (new ParserFactory)->createForNewestSupportedVersion();
             $stmts = json_decode(json_encode($parser->parse($code)), true);
             $result = $this->recursion($stmts);
 
@@ -88,7 +88,7 @@ abstract class CrawlerCommand extends Command
             if ($node->get('nodeType') === 'Expr_StaticCall') {
                 if (
                     $node->get('class.nodeType') === 'Name' &&
-                    $node->get('class.parts.0') === 'Translator' &&
+                    $node->get('class.name') === 'Translator' &&
                     $node->get('name.nodeType') === 'Identifier' &&
                     $node->get('name.name') === 'get'
                 ) {

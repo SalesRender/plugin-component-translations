@@ -11,17 +11,13 @@ use XAKEPEHOK\Path\Path;
 abstract class CommandTestCase extends TestCase
 {
 
-    /**@var Path */
-    protected static $pathToRootDir;
+    protected static Path $pathToRootDir;
 
-    /**@var Path */
-    protected static $pathToTestsSourceFiles;
+    protected static Path $pathToTestsSourceFiles;
 
-    /** @var Path */
-    protected static $pathToTranslations;
+    protected static Path $pathToTranslations;
 
-    /**@var Path */
-    protected static $pathToTestsSourceTranslations;
+    protected static Path $pathToTestsSourceTranslations;
 
     public static function setUpBeforeClass(): void
     {

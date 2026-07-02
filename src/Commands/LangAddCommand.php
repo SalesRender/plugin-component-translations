@@ -27,7 +27,7 @@ class LangAddCommand extends CrawlerCommand
         );
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $scheme = $this->crawl();
 

@@ -20,7 +20,7 @@ class LangUpdateCommand extends CrawlerCommand
         parent::__construct('lang:update');
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $actual = $this->crawl();
 
